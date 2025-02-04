@@ -1,0 +1,70 @@
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:#F3EFEB;
+}
+
+body {
+    /*creating the background*/
+    background-image: url(https://i.pinimg.com/736x/10/6b/f0/106bf080d95bae41fa7cb0ae72ecddd0.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    /*alignment of all the content*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.homePage { /*creating a box that visually seperates all the content*/
+    display: flex;
+    min-height: 90vh;
+    min-width: 120vh;
+    border: 10px solid #6088A6;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px #3D6089;
+    background-color: #6088A6;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*aligning the buttons*/
+.buttons {
+    display: flex;
+    justify-content: center space-evenly;
+    align-items: center;
+}
+
+/*creating the look of the quiz button*/
+#quizBtn {
+    transform: translateX(-50px);
+    height: 30px;
+    width: 120px;
+    background-color: #3D6089;
+    border: 3px solid #3D6089;
+    border-radius: 5px;
+}
+
+/*creating the look of the flashcard button*/
+#flashBtn {
+    transform: translateX(50px);
+    height: 30px;
+    width: 120px;
+    background-color: #3D6089;
+    border: 3px solid #3D6089;
+    border-radius: 5px;
+}
+
+/*color change animation when mouse hovers*/
+#quizBtn:hover, #flashBtn:hover {
+    animation: colorshift 0.5s;
+}
+
+@keyframes colorshift {
+    50%{
+        color: #3D6089;
+        background-color: #FAF0E8;
+        border-color: #C7D9E5;
+    }
+}

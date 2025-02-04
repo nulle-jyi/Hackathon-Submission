@@ -1,0 +1,81 @@
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:#FAF0E8;
+}
+.box {  /*creates a simple box as a seperator for the content*/
+    display: flex;
+    min-height: 90vh;
+    min-width: 120vh;
+    border: 10px solid #6088A6;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px #3D6089;
+    background-color: #6088A6;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.box h1 { /*adjusts the sizing of the header, which labels the emotion's number*/
+    font-size: 18px;
+    letter-spacing: 0.5ch;
+}
+
+.box p { /*adjusts the placement of <p>, containing all the content*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+body {
+    /*creating the background*/
+    background-image: url(https://i.pinimg.com/736x/10/6b/f0/106bf080d95bae41fa7cb0ae72ecddd0.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    /*alignment of all the content*/
+    display: flex;
+    min-height: 70vh;
+    min-width: 70vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.box .userAnswer ::placeholder /*setting initial color for requesting answer*/
+{
+    color: #C7D9E5;
+}
+.box .userAnswer input{ /*setting the color and answer line after an answer is inputted*/
+    width: 100%;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 2px solid #3D6089;
+    color: #99d3ff;
+    outline: none;
+    background: transparent;
+}
+
+#redirectButton {  /*creating the button's alignment, color, and sizing*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 60px;
+    background-color: #3D6089;
+    border: 3px solid #3D6089;
+    border-radius: 5px;
+}
+
+/*color change animation when mouse hovers*/
+#redirectButton:hover { 
+    animation: colorshift 0.5s ease-in-out 0s;
+}
+
+@keyframes colorshift {
+    50%{
+        color: #3D6089;
+        background-color: #FAF0E8;
+        border-color: #C7D9E5;
+    }
+}

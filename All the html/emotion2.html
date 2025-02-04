@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=100.0">
+    <title>Document</title>
+    <style>
+        #redirectButton{
+            display: none;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class = "box">
+    <h1>
+        Emotion 2 
+        <script src="script.js"></script>
+    </h1>
+    <p>
+        <img src = "bearded-young-man-wearing-shirt.jpg" height="200">
+        <form id="form">
+            <div class="userAnswer">
+            <label for="inputField"> answer:</label>
+            <input type="text" id="inputField" placeholder="Please type the answer here." oninput="checkMatch()">
+            </div>
+        </form>
+        <script>
+            function checkMatch(){
+                const inputField = document.getElementById('inputField').value;
+                if(inputField === emotion2){
+                    // add button to the form
+                    console.log('button added');
+                    const buttonElement = document.createElement('button'); 
+                    buttonElement.setAttribute('id', 'redirectButton');
+                    buttonElement.setAttribute('type', 'Button'); 
+                    buttonElement.setAttribute('onclick', 'next()');
+                    buttonElement.textContent = 'Submit'; 
+                    const formElement = document.getElementById('form'); 
+                    formElement.appendChild(buttonElement); 
+                }else{
+                    // remove button from form
+                    console.log('button removed');
+                    const buttonElement = document.getElementById('redirectButton');
+                    if (buttonElement) {
+                        buttonElement.remove();
+                    }
+                }
+            }
+            function next(){
+                window.location.href='emotion3.html';
+            }
+            
+        </script>
+
+    </p>
+    </div>
+</body>
+</html>

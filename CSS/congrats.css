@@ -1,0 +1,44 @@
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:#FAF0E8;
+}
+
+body {
+    /*alignment of all the content*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: translateY(40vh);
+    /*creating the background*/
+    background-image: url(https://i.pinimg.com/736x/13/95/68/13956802b3310fbc143116fca281fbd0.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/*creating the look of the return home button*/
+#return {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 200px;
+    background-color: #6088A6;
+    border: 3px solid #3D6089;
+    border-radius: 5px;
+}
+
+/*color change animation when mouse hovers*/
+#return:hover {
+    animation: colorshift 0.5s;
+}
+
+@keyframes colorshift {
+    50%{
+        color: #3D6089;
+        background-color: #FAF0E8;
+        border-color: #C7D9E5;
+    }
+}
